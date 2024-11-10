@@ -16,12 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", maxAge = 3600) 
 @RestController 
-@RequestMapping({"/personasapi"}) 
+@RequestMapping({"/entidadfinanciera"}) 
+
 public class PersonaRest { 
-@Autowired 
-PersonaService service; 
+    
+     @Autowired 
+    PersonaService service; 
  
-    @GetMapping("/persona")
+        @GetMapping("/persona")
     public List<Persona> listar() {
         return service.listar();
     }
@@ -38,7 +40,7 @@ PersonaService service;
 
     @PutMapping("/persona/{id}")
     public Persona editar(@RequestBody Persona p, @PathVariable("id") int id) {
-        p.setId(id);
+        p.setPersona_id(id);
         return service.edit(p);
     }
     

@@ -1,6 +1,7 @@
 package co.edu.EntidadFinanciera.domain;
 
 import jakarta.persistence.*; 
+import java.sql.Date;
  
 @Entity 
 @Table(name = "personas") 
@@ -8,41 +9,65 @@ public class Persona {
     @Id 
     @Column 
     @GeneratedValue(strategy = GenerationType.IDENTITY) 
-    private int id_p; 
+    private int persona_id; 
      
     @Column 
-    private String nombre_p; 
+    private String persona_nombre; 
      
     @Column 
-    private String apellido_p; 
+    private String persona_apellido;
+    
+    @Column
+    private Date persona_date;
+    
+    @Column
+    private int persona_documento;
  
     @Column 
     private int id_tp; 
+    
+    //////////////////////////////////////////
      
-    public int getId() { 
-        return id_p; 
-    } 
- 
-    public void setId(int id) { 
-        this.id_p = id; 
-    } 
- 
-    public String getNombres() { 
-        return nombre_p; 
-    } 
- 
-    public void setNombres(String nombres) { 
-        this.nombre_p = nombres; 
-    } 
- 
-    public String getApellidos() { 
-        return apellido_p; 
-    } 
- 
-    public void setApellidos(String apellidos) { 
-        this.apellido_p = apellidos; 
-    } 
- 
+     public int getPersona_id() {
+        return persona_id;
+    }
+
+    public void setPersona_id(int persona_id) {
+        this.persona_id = persona_id;
+    }
+
+    public String getPersona_nombre() {
+        return persona_nombre;
+    }
+
+    public void setPersona_nombre(String persona_nombre) {
+        this.persona_nombre = persona_nombre;
+    }
+
+    public String getPersona_apellido() {
+        return persona_apellido;
+    }
+
+    public void setPersona_apellido(String persona_apellido) {
+        this.persona_apellido = persona_apellido;
+    }
+    
+    public Date getPersona_date() {
+        return persona_date;
+    }
+
+    public void setPersona_date(Date persona_date) {
+        this.persona_date = persona_date;
+    }
+
+        public int getPersona_documento() {
+        return persona_documento;
+    }
+
+    public void setPersona_documento(int persona_documento) {
+        this.persona_documento = persona_documento;
+    }
+
     public int getId_tp() { 
         return id_tp; 
     } 
