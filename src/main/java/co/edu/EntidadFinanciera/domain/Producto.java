@@ -15,11 +15,15 @@ public class Producto {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int producto_id;
+    
     @Column
     private String producto_nombre;
+    
     @Column
-    private String producto_estado;
+    private String producto_requisitos;
 
+    
+    /////////////////////////////////////////////////////////
     public int getProducto_id() {
         return producto_id;
     }
@@ -36,11 +40,11 @@ public class Producto {
         this.producto_nombre = producto_nombre;
     }
 
-    public String getProducto_estado() {
-        return producto_estado;
+    public String getProducto_requisitos() {
+        return producto_requisitos;
     }
 
-    public void setProducto_estado(String producto_estado) {
-        this.producto_estado = producto_estado;
+    public void setProducto_requisitos(String producto_requisitos) {
+        this.producto_requisitos = producto_requisitos;
     }
 }

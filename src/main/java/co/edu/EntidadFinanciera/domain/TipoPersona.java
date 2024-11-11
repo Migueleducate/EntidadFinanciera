@@ -19,6 +19,8 @@ public class TipoPersona {
      
     @Column 
     private String nombre_tp; 
+    
+    ///////////////////////////////////////////////////////////////////
  
     public int getId_tp() { 
         return id_tp; 

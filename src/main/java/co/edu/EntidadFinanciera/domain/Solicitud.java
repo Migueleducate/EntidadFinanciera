@@ -10,14 +10,22 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "solicitud")
 public class Solicitud {
+    
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int solicitud_id;
+    
     @Column
-    private String solicitud_nombre;
+    private String solicitud_fecha;
+    
     @Column
     private String solicitud_estado;
+    
+    @Column
+    private String persona_id;
+    
+    ////////////////////////////////////////////////////
 
     public int getSolicitud_id() {
         return solicitud_id;
@@ -27,12 +35,12 @@ public class Solicitud {
         this.solicitud_id = solicitud_id;
     }
 
-    public String getSolicitud_nombre() {
-        return solicitud_nombre;
+    public String getSolicitud_fecha() {
+        return solicitud_fecha;
     }
 
-    public void setSolicitud_nombre(String solicitud_nombre) {
-        this.solicitud_nombre = solicitud_nombre;
+    public void setSolicitud_fecha(String solicitud_fecha) {
+        this.solicitud_fecha = solicitud_fecha;
     }
 
     public String getSolicitud_estado() {
@@ -42,4 +50,13 @@ public class Solicitud {
     public void setSolicitud_estado(String solicitud_estado) {
         this.solicitud_estado = solicitud_estado;
     }
+    
+    public String getPersona_id(){
+         return persona_id;
+    }
+    
+    public void setPersona_id(String persona_id){
+        this.persona_id = persona_id;
+    }
+     
 }
