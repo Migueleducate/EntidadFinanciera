@@ -24,7 +24,7 @@ public class Solicitud {
     
     @Column
     private String persona_id;
-    
+    //holamundo
     ////////////////////////////////////////////////////
 
     public int getSolicitud_id() {
