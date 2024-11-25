@@ -1,4 +1,5 @@
 package co.edu.EntidadFinanciera.domain;
+
 import java.util.List; 
 import org.springframework.data.repository.Repository; 
 

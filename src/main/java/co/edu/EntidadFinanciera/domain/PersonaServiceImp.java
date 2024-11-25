@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class PersonaServiceImp implements PersonaService {
     @Autowired 
 private PersonaRepository repositorio; 
+    
 @Override 
 public List<Persona> listar() { 
 return repositorio.findAll(); 
